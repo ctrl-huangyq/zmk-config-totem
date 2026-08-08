@@ -115,25 +115,51 @@ parse_config:
 
   # Make symbol layers render as actual symbols instead of names.
   zmk_keycode_map:
-    BSPC: "Bksp"
-    DEL: "Del"
+    # Editing / whitespace
+    BSPC: "⌫"
+    DEL: "⌦"
+    SPACE: "⎵"
+    TAB: "⇥"
+    ENTER: "↵"
+    ESC: "Esc"
     INS: "Ins"
 
+    # Navigation
+    LEFT: "←"
+    DOWN: "↓"
+    UP: "↑"
+    RIGHT: "→"
+
+    HOME: "Home"
+    END: "End"
     PG_DN: "PgDn"
     PG_UP: "PgUp"
 
+    # Punctuation
+    COMMA: ","
+    DOT: "."
+    SLASH: "/"
+    SEMI: ";"
+
+    # Modifiers that appear as plain keys in Direct
+    LSHIFT: "⇧"
+    LCTRL: "Ctrl"
+    LALT: "Alt"
+    LGUI: "GUI"
+
+    # System
     PSCRN: "PrintScr"
 
-    C_BRI_DN: "Bri-"
+    C_BRI_DN: "Bri−"
     C_BRI_UP: "Bri+"
 
-    C_VOL_DN: "Vol-"
+    C_VOL_DN: "Vol−"
     C_VOL_UP: "Vol+"
     C_MUTE: "Mute"
 
-    C_PREV: "Prev"
-    C_PP: "Play/Pause"
-    C_NEXT: "Next"
+    C_PREV: "⏮"
+    C_PP: "⏯"
+    C_NEXT: "⏭"
 
     # Symbols
     CARET: "^"
@@ -175,6 +201,8 @@ parse_config:
     combo_caps_word:
       align: bottom
       offset: 0.5
+      width: 36
+      height: 32
 
 draw_config:
   dark_mode: "auto"
@@ -185,8 +213,8 @@ draw_config:
   key_rx: 8
   key_ry: 8
 
-  combo_w: 25
-  combo_h: 22
+  combo_w: 32
+  combo_h: 24
 
   inner_pad_w: 3
   inner_pad_h: 3
@@ -276,22 +304,13 @@ draw_config:
         system-ui,
         sans-serif;
 
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 0.035em;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.025em;
 
-      /*
-       * Strong outlined layer heading.
-       *
-       * The outline keeps the title readable even when a transparent
-       * SVG is displayed on a background that does not match the
-       * browser's preferred color scheme.
-       */
-      fill: #202228 !important;
-      stroke: #ffffff !important;
-      stroke-width: 5px;
-      stroke-linejoin: round;
-      paint-order: stroke fill;
+      fill: #435a82;
+      stroke: none;
+      paint-order: normal;
     }
 
     text.tap {
@@ -353,7 +372,6 @@ draw_config:
       }
 
       text.label {
-        fill: #f3f5f8 !important;
-        stroke: #242830 !important;
+        fill: #b6c7e6;
       }
     }
