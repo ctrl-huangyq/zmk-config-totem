@@ -177,7 +177,7 @@ parse_config:
       offset: 0.5
 
 draw_config:
-  dark_mode: false
+  dark_mode: "auto"
   n_columns: 2
 
   # Key geometry
@@ -276,14 +276,22 @@ draw_config:
         system-ui,
         sans-serif;
 
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 0.03em;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.035em;
 
-      fill: var(--km-text);
-
-      stroke: none;
-      paint-order: normal;
+      /*
+       * Strong outlined layer heading.
+       *
+       * The outline keeps the title readable even when a transparent
+       * SVG is displayed on a background that does not match the
+       * browser's preferred color scheme.
+       */
+      fill: #202228 !important;
+      stroke: #ffffff !important;
+      stroke-width: 5px;
+      stroke-linejoin: round;
+      paint-order: stroke fill;
     }
 
     text.tap {
@@ -342,5 +350,10 @@ draw_config:
         --km-accent: #9bafd4;
 
         fill: var(--km-text);
+      }
+
+      text.label {
+        fill: #f3f5f8 !important;
+        stroke: #242830 !important;
       }
     }
