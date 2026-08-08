@@ -6,12 +6,58 @@
 
 #include "totem.dtsi"
 
-&kscan0 {
-    col-gpios
-        = <&xiao_d 8 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 10 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 5 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 4 GPIO_ACTIVE_HIGH>
-        ;
+/ {
+    chosen {
+        /*
+         * The dongle has no physical key matrix.
+         * Use a mock kscan so D4/D5 are free for I2C.
+         */
+        zmk,kscan = &mock_kscan;
+        zephyr,display = &oled;
+    };
+
+    mock_kscan: kscan_1 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
+
+/*
+ * Keep the physical layout metadata usable while the dongle itself
+ * uses the mock scanner.
+ */
+&default_layout {
+    kscan = <&mock_kscan>;
+};
+
+/delete-node/ &kscan0;
+
+/*
+ * XIAO nRF52840:
+ *   D4 = SDA
+ *   D5 = SCL
+ */
+&xiao_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+
+        width = <128>;
+        height = <64>;
+
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+
+        segment-remap;
+        com-invdir;
+        inversion-on;
+
+        prechargep = <0x22>;
+    };
 };
