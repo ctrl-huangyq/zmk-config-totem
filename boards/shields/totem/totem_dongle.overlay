@@ -8,15 +8,15 @@
 
 / {
     chosen {
-        /*
-         * The dongle has no physical key matrix.
-         * Use a mock kscan so D4/D5 are free for I2C.
-         */
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
     };
 
-    mock_kscan: kscan_1 {
+    /*
+     * The dongle has no physical key matrix.
+     * Key events are received from the split peripherals.
+     */
+    mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
@@ -25,21 +25,14 @@
 };
 
 /*
- * Keep the physical layout metadata usable while the dongle itself
- * uses the mock scanner.
+ * nice!nano exposes its I2C bus through the Pro Micro interconnect.
+ *
+ * This configuration assumes:
+ *   128x64 OLED
+ *   SSD1306 controller
+ *   I2C address 0x3C
  */
-&default_layout {
-    kscan = <&mock_kscan>;
-};
-
-/delete-node/ &kscan0;
-
-/*
- * XIAO nRF52840:
- *   D4 = SDA
- *   D5 = SCL
- */
-&xiao_i2c {
+&pro_micro_i2c {
     status = "okay";
 
     oled: ssd1306@3c {

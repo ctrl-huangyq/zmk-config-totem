@@ -9,7 +9,6 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
         zmk,physical-layout = &default_layout;
     };
 
@@ -35,7 +34,6 @@
         compatible = "zmk,physical-layout";
         display-name = "TOTEM";
         transform = <&default_transform>;
-        kscan = <&kscan0>;
 
         keys
             = <&key_physical_attrs 105 100   77 151 (-1000)  130 201>
@@ -79,18 +77,6 @@
             , <&key_physical_attrs 105 100  778 432 (-3000)  831 482>
             , <&key_physical_attrs 105 100  886 387 (-1500)  939 437>
             , <&key_physical_attrs 105 100 1003 371       0    0   0>
-            ;
-    };
-
-    kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
-
-        row-gpios
-            = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 };
