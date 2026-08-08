@@ -124,6 +124,17 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 
+@media (prefers-color-scheme: dark) {
+svg.keymap { fill: #d1d6db; }
+rect.key { fill: #3f4750; }
+rect.key, rect.combo { stroke: #60666c; }
+rect.combo, rect.combo-separate { fill: #1f3d7a; }
+rect.held, rect.combo.held { fill: #854747; }
+text.label, text.footer { stroke: black; }
+text.trans { fill: #7e8184; }
+path.combo { stroke: #7f7f7f; }
+
+}
 svg.keymap {
   font-family:
     Inter,
@@ -198,14 +209,22 @@ text.label {
     system-ui,
     sans-serif;
 
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 0.03em;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.035em;
 
-  fill: var(--km-text);
-
-  stroke: none;
-  paint-order: normal;
+  /*
+   * Strong outlined layer heading.
+   *
+   * The outline keeps the title readable even when a transparent
+   * SVG is displayed on a background that does not match the
+   * browser's preferred color scheme.
+   */
+  fill: #202228 !important;
+  stroke: #ffffff !important;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
 }
 
 text.tap {
@@ -264,6 +283,11 @@ text.footer {
     --km-accent: #9bafd4;
 
     fill: var(--km-text);
+  }
+
+  text.label {
+    fill: #f3f5f8 !important;
+    stroke: #242830 !important;
   }
 }
 </style>
