@@ -20,8 +20,8 @@ layers:
   - {t: J, h: Ctrl, type: mod}
   - {t: K, h: Alt, type: mod}
   - {t: L, h: GUI, type: mod}
-  - SEMI
-  - Del
+  - ;
+  - ⌦
   - Z
   - X
   - C
@@ -29,14 +29,14 @@ layers:
   - B
   - N
   - M
-  - COMMA
-  - DOT
-  - SLASH
+  - ','
+  - .
+  - /
   - '-'
-  - Bksp
-  - {t: SPACE, h: Nav}
-  - {t: TAB, h: Num}
-  - {t: ENTER, h: Sym}
+  - ⌫
+  - {t: ⎵, h: Nav}
+  - {t: ⇥, h: Num}
+  - {t: ↵, h: Sym}
   - {t: Shift★, h: Shift, type: mod}
   - Repeat
   Direct:
@@ -59,7 +59,7 @@ layers:
   - J
   - K
   - L
-  - SEMI
+  - ;
   - {t: Base, h: toggle}
   - Z
   - X
@@ -68,37 +68,37 @@ layers:
   - B
   - N
   - M
-  - COMMA
-  - DOT
-  - SLASH
+  - ','
+  - .
+  - /
   - '-'
-  - Bksp
-  - SPACE
-  - TAB
-  - ENTER
-  - LSHIFT
-  - LCTRL
+  - ⌫
+  - ⎵
+  - ⇥
+  - ↵
+  - ⇧
+  - Ctrl
   Nav:
-  - ESC
-  - TAB
-  - Shift+TAB
+  - Esc
+  - ⇥
+  - Shift+⇥
   - ''
   - ''
-  - Bksp
-  - HOME
+  - ⌫
+  - Home
   - PgDn
   - PgUp
-  - END
+  - End
   - {t: Shift★, h: Shift, type: mod}
   - {t: GUI★, h: GUI, type: mod}
   - {t: Alt★, h: Alt, type: mod}
   - {t: Ctrl★, h: Ctrl, type: mod}
   - {t: Mouse, h: toggle}
-  - Del
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
+  - ⌦
+  - ←
+  - ↓
+  - ↑
+  - →
   - ''
   - ''
   - ''
@@ -106,10 +106,10 @@ layers:
   - ''
   - ''
   - Ins
-  - Ctrl+LEFT
-  - Ctrl+Bksp
-  - Ctrl+Del
-  - Ctrl+RIGHT
+  - Ctrl+←
+  - Ctrl+⌫
+  - Ctrl+⌦
+  - Ctrl+→
   - ''
   - {t: ▽, type: trans}
   - {type: held}
@@ -120,10 +120,10 @@ layers:
   Num:
   - ''
   - '='
-  - TAB
-  - Bksp
+  - ⇥
+  - ⌫
   - ''
-  - SLASH
+  - /
   - '7'
   - '8'
   - '9'
@@ -144,7 +144,7 @@ layers:
   - ''
   - ''
   - ''
-  - DOT
+  - .
   - '4'
   - '5'
   - '6'
@@ -228,16 +228,16 @@ layers:
   - Slow↑
   - Slow→
   - ''
-  - Bksp
-  - SPACE
-  - TAB
+  - ⌫
+  - ⎵
+  - ⇥
   - L Click
   - R Click
   - M Click
   Adjust:
   - {t: BT Clear, type: system}
   - {t: BT Next, type: system}
-  - Bri-
+  - Bri−
   - Bri+
   - {t: USB/BLE, type: system}
   - Vol+
@@ -250,15 +250,15 @@ layers:
   - {t: Alt★, h: Alt, type: mod}
   - {t: Ctrl★, h: Ctrl, type: mod}
   - {t: Direct, h: toggle}
-  - Vol-
+  - Vol−
   - F1
   - F2
   - F3
   - F11
   - {t: Boot, type: system}
-  - Prev
-  - Play/Pause
-  - Next
+  - ⏮
+  - ⏯
+  - ⏭
   - PrintScr
   - ''
   - Mute
@@ -275,7 +275,7 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [0, 1]
-  k: ESC
+  k: Esc
   l: [Base]
   a: top
   o: 0.5
@@ -284,3 +284,5 @@ combos:
   l: [Base]
   a: bottom
   o: 0.5
+  w: 36.0
+  h: 32.0
