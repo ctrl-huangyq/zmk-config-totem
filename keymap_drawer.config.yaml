@@ -2,9 +2,9 @@ parse_config:
   sticky_label: "★"
   toggle_label: "toggle"
 
-  # Keep transparent positions visible, but very quiet.
+  # Transparent positions stay visible.
   trans_legend:
-    t: "·"
+    t: "▽"
     type: "trans"
 
   raw_binding_map:
@@ -113,6 +113,7 @@ parse_config:
     keycode_combiner: "{mods}+{key}"
     mod_combiner: "{mod_1}+{mod_2}"
 
+  # Make symbol layers render as actual symbols instead of names.
   zmk_keycode_map:
     BSPC: "Bksp"
     DEL: "Del"
@@ -134,7 +135,38 @@ parse_config:
     C_PP: "Play/Pause"
     C_NEXT: "Next"
 
-  # Move the two Base-layer combos slightly outside the keyboard.
+    # Symbols
+    CARET: "^"
+    LT: "<"
+    GT: ">"
+    HASH: "#"
+    DOLLAR: "$"
+
+    EXCL: "!"
+    AMPERSAND: "&"
+    ASTERISK: "*"
+    DQT: "\""
+    SQT: "'"
+
+    LBRC: "{"
+    RBRC: "}"
+    LPAR: "("
+    RPAR: ")"
+    EQUAL: "="
+
+    BACKSLASH: "\\"
+    TILDE: "~"
+    LBKT: "["
+    RBKT: "]"
+    PERCENT: "%"
+    GRAVE: "`"
+
+    PIPE: "|"
+    PLUS: "+"
+    MINUS: "-"
+    UNDER: "_"
+    AT: "@"
+
   zmk_combos:
     combo_escape:
       align: top
@@ -144,12 +176,8 @@ parse_config:
       align: bottom
       offset: 0.5
 
-
 draw_config:
-  # We handle automatic light/dark colors ourselves below.
   dark_mode: false
-
-  # Two layers side-by-side.
   n_columns: 2
 
   # Key geometry
@@ -171,13 +199,9 @@ draw_config:
   shrink_wide_legends: 8
   append_colon_to_layer_header: false
 
-  footer_text: "TOTEM 38  ·  ★ sticky tap  ·  lower legend = hold"
+  footer_text: "TOTEM 38 · ★ sticky tap · lower legend = hold · ▽ = transparent · transparent thumbs inherit Base"
 
   svg_extra_style: |
-    /*
-     * TOTEM keymap cheat-sheet theme.
-     */
-
     svg.keymap {
       font-family:
         Inter,
@@ -189,8 +213,8 @@ draw_config:
       font-size: 13px;
       font-weight: 500;
 
-      --km-text: #24262b;
-      --km-muted: #858a94;
+      --km-text: #202228;
+      --km-muted: #767c86;
 
       --km-key: #f7f8fa;
       --km-key-border: #d8dbe1;
@@ -201,14 +225,11 @@ draw_config:
       --km-held: #e7edf8;
       --km-combo: #e8eef8;
 
-      --km-accent: #61769b;
+      --km-accent: #556b92;
 
       fill: var(--km-text);
     }
 
-    /*
-     * Normal keys
-     */
     rect.key {
       fill: var(--km-key);
     }
@@ -219,23 +240,14 @@ draw_config:
       stroke-width: 1;
     }
 
-    /*
-     * Home-row mods and Smart Mods
-     */
     rect.key.mod {
       fill: var(--km-mod);
     }
 
-    /*
-     * Bluetooth, output and firmware-management keys
-     */
     rect.key.system {
       fill: var(--km-system);
     }
 
-    /*
-     * Keys held to activate another layer
-     */
     rect.held,
     rect.combo.held {
       fill: var(--km-held);
@@ -243,9 +255,6 @@ draw_config:
       stroke-width: 1.2;
     }
 
-    /*
-     * Combo boxes
-     */
     rect.combo,
     rect.combo-separate {
       fill: var(--km-combo);
@@ -259,9 +268,6 @@ draw_config:
       fill: none;
     }
 
-    /*
-     * Layer headings
-     */
     text.label {
       font-family:
         Inter,
@@ -270,27 +276,20 @@ draw_config:
         system-ui,
         sans-serif;
 
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.025em;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
 
       fill: var(--km-text);
 
-      /* Remove keymap-drawer's default white outline. */
       stroke: none;
       paint-order: normal;
     }
 
-    /*
-     * Primary key action
-     */
     text.tap {
-      font-weight: 600;
+      font-weight: 650;
     }
 
-    /*
-     * Hold / secondary legends
-     */
     text.hold,
     text.shifted,
     text.left,
@@ -304,27 +303,19 @@ draw_config:
       font-weight: 500;
     }
 
-    /*
-     * Layer-tap and layer-switch labels
-     */
     text.layer-activator {
       fill: var(--km-accent);
-      font-weight: 650;
+      font-weight: 700;
       text-decoration: none;
     }
 
-    /*
-     * Transparent positions
-     */
     text.trans {
       fill: var(--km-muted);
-      opacity: 0.22;
-      font-size: 9px;
+      opacity: 0.55;
+      font-size: 11px;
+      font-weight: 650;
     }
 
-    /*
-     * Footer
-     */
     text.footer {
       fill: var(--km-muted);
       font-size: 10px;
@@ -334,13 +325,10 @@ draw_config:
       paint-order: normal;
     }
 
-    /*
-     * Automatic dark theme.
-     */
     @media (prefers-color-scheme: dark) {
       svg.keymap {
         --km-text: #e8eaf0;
-        --km-muted: #9298a3;
+        --km-muted: #979da8;
 
         --km-key: #262a31;
         --km-key-border: #3d434d;
