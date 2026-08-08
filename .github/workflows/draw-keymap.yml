@@ -1,0 +1,40 @@
+name: Draw keymap
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths:
+      - "config/totem.keymap"
+      - "config/info.json"
+      - "keymap_drawer.config.yaml"
+      - ".github/workflows/draw-keymap.yml"
+
+jobs:
+  draw:
+    permissions:
+      contents: write
+
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+
+    with:
+      keymap_patterns: "config/totem.keymap"
+      config_path: "keymap_drawer.config.yaml"
+
+      # This keymap only uses standard ZMK includes, so fetching west
+      # modules is unnecessary for drawing.
+      west_config_path: ""
+
+      output_folder: "keymap-drawer"
+
+      # Explicit names keep the diagram stable even if DTS node names change.
+      parse_args: >-
+        totem:'--layer-names Base Direct Nav Num Sym Mouse Adjust'
+
+      # Reuse the exact physical layout already used by Keymap Editor.
+      draw_args: >-
+        totem:'-j config/info.json -l LAYOUT'
+
+      destination: "commit"
+      commit_message: "docs: update keymap diagram"
+      fail_on_error: true
