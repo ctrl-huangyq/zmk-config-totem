@@ -32,7 +32,7 @@ layers:
   - COMMA
   - DOT
   - SLASH
-  - MINUS
+  - '-'
   - Bksp
   - {t: SPACE, h: Nav}
   - {t: TAB, h: Num}
@@ -71,7 +71,7 @@ layers:
   - COMMA
   - DOT
   - SLASH
-  - MINUS
+  - '-'
   - Bksp
   - SPACE
   - TAB
@@ -111,15 +111,15 @@ layers:
   - Ctrl+Del
   - Ctrl+RIGHT
   - ''
-  - {t: ·, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Num:
   - ''
-  - EQUAL
+  - '='
   - TAB
   - Bksp
   - ''
@@ -127,13 +127,13 @@ layers:
   - '7'
   - '8'
   - '9'
-  - ASTERISK
+  - '*'
   - {t: Shift★, h: Shift, type: mod}
   - {t: GUI★, h: GUI, type: mod}
   - {t: Alt★, h: Alt, type: mod}
   - {t: Ctrl★, h: Ctrl, type: mod}
   - ''
-  - PLUS
+  - +
   - '1'
   - '2'
   - '3'
@@ -148,53 +148,53 @@ layers:
   - '4'
   - '5'
   - '6'
-  - MINUS
+  - '-'
   - ''
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Sym:
-  - CARET
-  - LT
-  - GT
-  - HASH
-  - DOLLAR
-  - EXCL
-  - AMPERSAND
-  - ASTERISK
-  - DQT
-  - SQT
-  - LBRC
-  - RBRC
-  - LPAR
-  - RPAR
-  - EQUAL
-  - BACKSLASH
+  - ^
+  - <
+  - '>'
+  - '#'
+  - $
+  - '!'
+  - '&'
+  - '*'
+  - '"'
+  - ''''
+  - '{'
+  - '}'
+  - (
+  - )
+  - '='
+  - \
   - {t: Ctrl★, h: Ctrl, type: mod}
   - {t: Alt★, h: Alt, type: mod}
   - {t: GUI★, h: GUI, type: mod}
   - {t: Shift★, h: Shift, type: mod}
   - ''
-  - TILDE
-  - LBKT
-  - RBKT
-  - PERCENT
-  - GRAVE
-  - PIPE
-  - PLUS
-  - MINUS
-  - UNDER
-  - AT
+  - '~'
+  - '['
+  - ']'
+  - '%'
+  - '`'
+  - '|'
+  - +
+  - '-'
+  - _
+  - '@'
   - ''
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Mouse:
   - ''
   - ''
@@ -267,12 +267,12 @@ layers:
   - F6
   - F12
   - {t: Reset, type: system}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {type: held}
-  - {t: ·, type: trans}
-  - {t: ·, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [0, 1]
   k: ESC
