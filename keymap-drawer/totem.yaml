@@ -239,7 +239,7 @@ layers:
   - {t: BT Next, type: system}
   - Bri−
   - Bri+
-  - {t: USB/BLE, type: system}
+  - {t: USB BLE, type: system}
   - Vol+
   - F7
   - F8
