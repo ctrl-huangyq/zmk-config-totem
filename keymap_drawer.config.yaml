@@ -227,7 +227,7 @@ draw_config:
   shrink_wide_legends: 8
   append_colon_to_layer_header: false
 
-  footer_text: "TOTEM 38 · ★ sticky tap · ▽ = transparent · transparent thumbs inherit Base"
+  footer_text: "TOTEM 38 · ★ sticky modifier · ▽ transparent · thumbs inherit Base"
 
   svg_extra_style: |
     svg.keymap {
