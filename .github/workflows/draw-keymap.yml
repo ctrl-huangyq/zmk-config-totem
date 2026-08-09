@@ -12,29 +12,51 @@ on:
 
 jobs:
   draw:
+    runs-on: ubuntu-latest
+
     permissions:
       contents: write
 
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
 
-    with:
-      keymap_patterns: "config/totem.keymap"
-      config_path: "keymap_drawer.config.yaml"
+      - name: Install keymap-drawer
+        run: pipx install keymap-drawer
 
-      # This keymap only uses standard ZMK includes, so fetching west
-      # modules is unnecessary for drawing.
-      west_config_path: ""
+      - name: Parse keymap
+        run: |
+          mkdir -p keymap-drawer
 
-      output_folder: "keymap-drawer"
+          keymap -c keymap_drawer.config.yaml parse \
+            -z config/totem.keymap \
+            --layer-names Base Direct Nav Num Sym Mouse Adjust \
+            -o keymap-drawer/totem.yaml
 
-      # Explicit names keep the diagram stable even if DTS node names change.
-      parse_args: >-
-        totem:'--layer-names Base Direct Nav Num Sym Mouse Adjust'
+      - name: Draw two-column keymap
+        run: |
+          keymap -c keymap_drawer.config.yaml draw \
+            keymap-drawer/totem.yaml \
+            -j config/info.json \
+            -l LAYOUT \
+            -o keymap-drawer/totem.svg
 
-      # Reuse the exact physical layout already used by Keymap Editor.
-      draw_args: >-
-        totem:'-j config/info.json -l LAYOUT'
+      - name: Draw one-column keymap
+        run: |
+          cat > /tmp/keymap-1col.yaml <<'EOF'
+          draw_config:
+            n_columns: 1
+          EOF
 
-      destination: "commit"
-      commit_message: "docs: update keymap diagram"
-      fail_on_error: true
+          keymap -c keymap_drawer.config.yaml draw \
+            keymap-drawer/totem.yaml \
+            /tmp/keymap-1col.yaml \
+            -j config/info.json \
+            -l LAYOUT \
+            -o keymap-drawer/totem-1col.svg
+
+      - name: Commit updated diagrams
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          file_pattern: "keymap-drawer/*.svg keymap-drawer/*.yaml"
+          commit_message: "docs: update keymap diagrams"
