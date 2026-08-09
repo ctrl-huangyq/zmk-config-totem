@@ -1,5 +1,27 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+
+on:
+  push:
+    paths-ignore:
+      - ".gitignore"
+      - "README.md"
+      - "LICENSE"
+      - "keymap-drawer/**"
+      - "keymap_drawer.config.yaml"
+      - "config/info.json"
+      - ".github/workflows/draw-keymap.yml"
+
+  pull_request:
+    paths-ignore:
+      - ".gitignore"
+      - "README.md"
+      - "LICENSE"
+      - "keymap-drawer/**"
+      - "keymap_drawer.config.yaml"
+      - "config/info.json"
+      - ".github/workflows/draw-keymap.yml"
+
+  workflow_dispatch:
 
 jobs:
   build:
