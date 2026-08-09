@@ -55,7 +55,7 @@ parse_config:
 
     # Wireless / output
     "&out OUT_TOG":
-      t: "USB/BLE"
+      t: "USB BLE"
       type: "system"
 
     "&bt BT_CLR":
@@ -227,7 +227,7 @@ draw_config:
   shrink_wide_legends: 8
   append_colon_to_layer_header: false
 
-  footer_text: "TOTEM 38 · ★ sticky tap · lower legend = hold · ▽ = transparent · transparent thumbs inherit Base"
+  footer_text: "TOTEM 38 · ★ sticky tap · ▽ = transparent · transparent thumbs inherit Base"
 
   svg_extra_style: |
     svg.keymap {
@@ -345,7 +345,7 @@ draw_config:
 
     text.footer {
       fill: var(--km-muted);
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 400;
 
       stroke: none;
