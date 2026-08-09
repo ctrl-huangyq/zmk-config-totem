@@ -6,7 +6,7 @@ The two halves use Seeed XIAO nRF52840 controllers, with a nice!nano V2 dongle a
 
 ## Keymap
 
-![TOTEM keymap](keymap-drawer/totem-1col.svg)
+[![TOTEM keymap](keymap-drawer/totem.svg)](keymap-drawer/totem-1col.svg)
 
 Keymap source: [`config/totem.keymap`](config/totem.keymap)
 
