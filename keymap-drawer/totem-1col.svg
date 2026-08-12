@@ -420,7 +420,7 @@ text.footer {
 </g>
 <g transform="translate(245, 228)" class="key keypos-32">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
-<text x="0" y="0" class="key tap">Repeat</text>
+<text x="0" y="0" class="key tap">⇥</text>
 </g>
 <g transform="translate(309, 236) rotate(15.0)" class="key keypos-33">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
@@ -447,7 +447,7 @@ text.footer {
 </a></g>
 <g transform="translate(575, 228)" class="key keypos-37">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
-<text x="0" y="0" class="key tap">⇥</text>
+<text x="0" y="0" class="key tap">Repeat</text>
 </g>
 <g class="combo combopos-0">
 <path d="M107,4 h-26 a6.0,6.0 0 0 0 -6.0,6.0 v81" class="combo"/>
@@ -600,7 +600,7 @@ text.footer {
 </g>
 <g transform="translate(245, 228)" class="key keypos-32">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
-<text x="0" y="0" class="key tap">Ctrl</text>
+<text x="0" y="0" class="key tap">⇥</text>
 </g>
 <g transform="translate(309, 236) rotate(15.0)" class="key keypos-33">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
@@ -620,7 +620,7 @@ text.footer {
 </g>
 <g transform="translate(575, 228)" class="key keypos-37">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
-<text x="0" y="0" class="key tap">⇥</text>
+<text x="0" y="0" class="key tap">Ctrl</text>
 </g>
 </g>
 </g>
