@@ -37,7 +37,7 @@ layers:
   - {t: ⎵, h: Nav}
   - {t: ⇥, h: Num}
   - {t: ↵, h: Sym}
-  - BACKSPACE
+  - ⌫
   - Repeat
   Direct:
   - Q

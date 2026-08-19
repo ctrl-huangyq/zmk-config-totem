@@ -443,7 +443,7 @@ text.footer {
 </a></g>
 <g transform="translate(512, 236) rotate(-15.0)" class="key keypos-36">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 89%">BACKSPACE</tspan></text>
+<text x="0" y="0" class="key tap">⌫</text>
 </g>
 <g transform="translate(575, 228)" class="key keypos-37">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
