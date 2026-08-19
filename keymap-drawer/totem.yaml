@@ -33,11 +33,11 @@ layers:
   - .
   - /
   - '-'
-  - ⇥
-  - {t: ⎵, h: Nav}
-  - {t: ↵, h: Num}
   - {t: Shift★, h: Shift, type: mod}
-  - {t: ⌫, h: Sym}
+  - {t: ⎵, h: Nav}
+  - {t: ⇥, h: Num}
+  - {t: ↵, h: Sym}
+  - BACKSPACE
   - Repeat
   Direct:
   - Q
@@ -72,10 +72,10 @@ layers:
   - .
   - /
   - '-'
-  - ⇥
-  - ⎵
-  - ↵
   - ⇧
+  - ⎵
+  - ⇥
+  - ↵
   - ⌫
   - Ctrl
   Nav:
@@ -192,8 +192,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Mouse:
   - ''
@@ -270,8 +270,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
 - p: [0, 1]
