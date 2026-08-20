@@ -21,7 +21,7 @@ layers:
   - {t: K, h: Alt, type: mod}
   - {t: L, h: GUI, type: mod}
   - ;
-  - ⌦
+  - Shift+⇧
   - Z
   - X
   - C
