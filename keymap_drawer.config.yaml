@@ -140,6 +140,7 @@ parse_config:
     DOT: "."
     SLASH: "/"
     SEMI: ";"
+    COLON: ":"
 
     # Modifiers that appear as plain keys in Direct
     LSHIFT: "⇧"
