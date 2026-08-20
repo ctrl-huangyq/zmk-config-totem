@@ -866,7 +866,7 @@ text.footer {
 </g>
 <g transform="translate(94, 215) rotate(-10.0)" class="key keypos-21">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
-<text x="0" y="0" class="key tap">COLON</text>
+<text x="0" y="0" class="key tap">:</text>
 </g>
 <g transform="translate(146, 167) rotate(-4.0)" class="key keypos-22">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
