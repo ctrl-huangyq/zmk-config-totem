@@ -797,6 +797,7 @@ text.footer {
 </g>
 <g transform="translate(319, 62)" class="key keypos-4">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
+<text x="0" y="0" class="key tap">^</text>
 </g>
 <g transform="translate(502, 62)" class="key keypos-5">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
@@ -840,6 +841,7 @@ text.footer {
 </g>
 <g transform="translate(319, 116)" class="key keypos-14">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
+<text x="0" y="0" class="key tap">_</text>
 </g>
 <g transform="translate(502, 117)" class="key keypos-15">
 <rect rx="8" ry="8" x="-26" y="-24" width="51" height="48" class="key"/>
